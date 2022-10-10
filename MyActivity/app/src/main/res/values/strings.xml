@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyActivity</string>
+    <string name="hello">Нажимайка!</string>
+    <string name="Tap">Нажми!</string>
+    <string name="Click">Кликните!</string>
+    <string name="reset">Обнуление</string>
+</resources>
