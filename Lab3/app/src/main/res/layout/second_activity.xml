@@ -11,8 +11,8 @@
         android:layout_width="358dp"
         android:layout_height="47dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="28dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
         android:layout_toStartOf="@+id/add"
         android:hint="Имя студента"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,8 +24,8 @@
         android:id="@+id/add"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="124dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginRight="140dp"
         android:layout_toStartOf="@+id/userName"
         android:onClick="add"
         android:text="Добавить"
@@ -37,8 +37,8 @@
         android:id="@+id/remove"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginRight="20dp"
         android:layout_toStartOf="@+id/add"
         android:onClick="remove"
         android:text="Удалить"
@@ -48,13 +48,53 @@
 
     <ListView
         android:id="@+id/usersList"
-        android:layout_width="399dp"
-        android:layout_height="544dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="356dp"
+        android:layout_height="533dp"
+        android:layout_marginTop="60dp"
         android:choiceMode="multipleChoice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Вы вошли как:"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="92dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="172dp"
+        android:text="имя"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Количество попыток входа:"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="35dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="124dp"
+        android:text="число"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="35dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

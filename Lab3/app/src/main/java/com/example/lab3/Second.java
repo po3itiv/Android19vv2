@@ -3,11 +3,14 @@ package com.example.lab3;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -19,11 +22,22 @@ public class Second extends AppCompatActivity {
     ListView usersList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i("AppLogger", "Переопределние onCreate Second");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_activity);
 
+
         // добавляем начальные элементы
         Collections.addAll(users);
+
+        String Name = getIntent().getExtras().getString("Lab3");
+        TextView textView = (TextView) findViewById(R.id.textView4);
+        textView.setText(Name);
+
+        String Value = getIntent().getExtras().getString("Lab3.1");
+        TextView textView2 = (TextView) findViewById(R.id.textView6);
+        textView2.setText(Value);
+
         // получаем элемент ListView
         usersList = findViewById(R.id.usersList);
         // создаем адаптер
@@ -45,7 +59,32 @@ public class Second extends AppCompatActivity {
             }
         });
     }
+    @Override
+    protected void onStop(){
+        super.onStop();
+        Log.i("AppLogger", "Переопределение onStop у Second");
+    }
+    @Override
+    protected void onStart(){
+        super.onStart();
+        Log.i("AppLogger", "Переопределение onStart уSecond");
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Log.i("AppLogger", "Переопределение onPause у Second");
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+        Log.i("AppLogger", "Переопределение onResume у Second");
+    }
 
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        Log.i("AppLogger", "Переопределение onRestart у Second");
+    }
     public void add(View view){
 
         EditText userName = findViewById(R.id.userName);
